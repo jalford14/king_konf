@@ -17,7 +17,8 @@ module KingKonf
 
       def ignore_unknown_variables?
         # Always ignore about unknown ENV vars if there's no prefix defined.
-        @ignore_unknown_variables || !env_prefix
+        # @ignore_unknown_variables || !env_prefix
+        true
       end
 
       def variable(name)
@@ -72,7 +73,7 @@ module KingKonf
 
     def initialize(env: ENV)
       @desc = nil
-      @ignore_unknown_variables = nil
+      @ignore_unknown_variables = true
       load_env(env)
     end
 
