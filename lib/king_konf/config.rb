@@ -12,7 +12,7 @@ module KingKonf
       end
 
       def ignore_unknown_variables(should_ignore)
-        @ignore_unknown_variables = should_ignore
+        @ignore_unknown_variables = true
       end
 
       def ignore_unknown_variables?
